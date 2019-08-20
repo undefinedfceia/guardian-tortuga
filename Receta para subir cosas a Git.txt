@@ -1,0 +1,25 @@
+Pasos para subir varios archivos de una al git
+
+Setear configuracion global del git (una sola vez)
+
+1- Aniadir los archivos q queres subir
+-Vas a la carpeta del repositorio (guardian de la biblioteca)
+-abris la terminal en esa ubicacion
+-pones git add .
+
+
+2- Hacer el commit
+-git commit -m "TuCOmentario uwuuuu" 
+-
+3- hacer el push
+- git push
+
+
+Para actualizar:
+-abris la terminal en tu repositorio
+-pones git pull
+- skerry
+
+/**************** eliminar archivos por extension: ********************/
+Windows: DEL /Q /S *.exe *.o
+Linux: find . -name "*.o" -type f -delete

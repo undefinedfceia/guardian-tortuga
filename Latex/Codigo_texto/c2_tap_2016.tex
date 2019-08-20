@@ -1,0 +1,73 @@
+\begin{verbatim}
+#include <iostream>
+#include <map>
+#include <iterator>
+
+using namespace std;
+long contador = 0;
+multimap <int, int> mat;
+multimap <int, int> matA;
+//vector<int> G[100]
+map <int, bool> reg;
+map <int, bool> pen;
+typedef multimap<int, int>::iterator MMAPIterator;
+
+bool check (int x, int n){
+	map <int, bool> :: iterator itr;
+	pair<MMAPIterator, MMAPIterator> result;
+	bool r = true;
+	result = matA.equal_range(x);
+	for (MMAPIterator it = result.first; it != result.second; it++){
+		itr = reg.find(it->second);
+		r = r && itr->second;
+		if (!r) break;
+	}
+	return r;
+}
+
+void registrar (int x, int n){
+	map <int, bool> :: iterator itr;
+	pair<MMAPIterator, MMAPIterator> result;
+	reg.insert(pair <int,bool> (x, 1));
+	pen.erase(x);
+	contador++;
+	result = mat.equal_range(x);
+	for (MMAPIterator it = result.first; it != result.second; it++){
+		itr = pen.find(it->second);
+		if(itr->second){
+			if (check(it->second, n))
+				registrar(it->second, n);
+		}
+	}
+}
+
+int main (){
+		int n,m, a, b, x;
+		while(cin >> n >> m)
+		{
+			mat.clear();
+			matA.clear();
+			reg.clear();
+			pen.clear();
+			a = b = x = contador = 0;
+			//Lee datos de correlativas
+			for(int i = 0; i < m; i++){
+				cin >> a >> b;
+				mat.insert(pair <int, int> (a,b));
+				matA.insert(pair <int, int> (b,a));
+			}
+
+			for(int i = 0; i < n; i++){
+				cin >> x;
+				//cout << check(x, (int *)mat, (int *)reg, n)  << endl;
+				if(check(x,n)){
+					registrar(x, n);
+				}else{
+					pen.insert(pair <int, bool> (x, 1));
+				}
+				cout << contador  << endl;
+			}
+		}
+	return 0;
+}
+\end{verbatim}

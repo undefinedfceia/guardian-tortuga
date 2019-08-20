@@ -1,0 +1,53 @@
+-------------------- Para inicializar un array en 0 (de enteros) -------------------- 
+
+int a[n] = {0} (n > 1) (el 0 puede ser otro valor, el primer dato valdra eso, pero el resto 0)
+
+___________________________________________________________________________________
+
+-------------------- String como Output --------------------
+
+Recordar siempre antes de enviar un output de string, si trabajaste con  un array de char, 
+convertirlo a string antes de pasarlo por cout
+
+___________________________________________________________________________________
+
+-------------------- Set Precision --------------------
+
+cout << fixed;
+cout << setprecision(2);
+
+___________________________________________________________________________________
+
+-------------------- C++11 --------------------
+
+Cambiar parámetro Build en geany a: (forall necesita c++11)
+
+g++ -Wall  -std=c++11 -o "%e" "%f"
+
+___________________________________________________________________________________
+
+-------------------- Multiplicar por 2^n --------------------
+
+i << n
+
+___________________________________________________________________________________
+
+-------------------- Funciones de comparacion para sort--------------------
+
+bool comp(ll a, ll b){
+  return a >= b; // ESTO NO
+  return a > b; // ESTO SI c:
+}
+
+___________________________________________________________________________________
+
+-------------------- Modulo n --------------------
+
+i & (n-1)
+
+____________________________________________________________________________________
+
+-------------------- ASCII----------------------------------------------------------
+
+Para sacar la posicion de una letra en el alfabeto, le restas la a (minuscula o mayuscula)
+Para los digitos, le restas el caracter 0 ('0')
