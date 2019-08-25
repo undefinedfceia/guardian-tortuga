@@ -18,26 +18,20 @@ const int MAXN = 1000000000;
 int main(){
 	ios::sync_with_stdio(0);
 	int n; 
-	set<ii> precio;
-	set<ii> calidad;
+	map<ii> laptop;
+	set<int> price;
+	set<int> quality;
+	set<int>::iterator it;
+	set<int>::iterator it2;
 	cin >> n;
 	int a,b;
 	forn(i,n){
 		cin >> a >> b;
-		precio.insert({a,b});
-		calidad.insert({b,a});
+		price.insert({a,b});
+		quality.insert({b,a});
+		laptop.insert({a,b});
 	}
-	for(ii v : precio){
-		set<ii>::iterator next = calidad.upper_bound({v.snd, MAXN});
-		cout << next->fst << " " << next->snd << endl;
-		while(next != calidad.end() && v.snd <= next->fst){
-			next++;
-		}
-		if(next != calidad.end()){
-			cout << "Happy Alex" << endl;
-			return 0;
-		}
-	}
+	//Tengo ordenado de menor a mayor los sets
 	cout << "Poor Alex" << endl;
 	return 0;
 }
