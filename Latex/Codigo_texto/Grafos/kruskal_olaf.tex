@@ -1,4 +1,4 @@
-\begin{verbatim}
+\begin{lstlisting}[language=C++]
 int uf[MAXN];
 void uf_init(){memset(uf,-1,sizeof(uf));}
 int uf_find(int x){return uf[x]<0?x:uf[x]=uf_find(uf[x]);}
@@ -19,4 +19,4 @@ ll kruskal(){  // assumes graph is connected
 	}
 	return r; // total cost
 }
-\end{verbatim}
+\end{lstlisting}

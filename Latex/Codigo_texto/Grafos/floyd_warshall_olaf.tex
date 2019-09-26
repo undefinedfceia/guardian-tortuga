@@ -1,4 +1,4 @@
-\begin{verbatim}
+\begin{lstlisting}[language=C++]
 // g[i][j]: weight of edge (i, j) or INF if there's no edge
 // g[i][i]=0
 ll g[MAXN][MAXN];int n;
@@ -11,4 +11,4 @@ bool hasNegCycle(int a, int b){ // true iff there's neg cycle in between
 	forn(i,n)if(g[a][i]<INF&&g[i][b]<INF&&g[i][i]<0)return true;
 	return false;
 }
-\end{verbatim}
+\end{lstlisting}

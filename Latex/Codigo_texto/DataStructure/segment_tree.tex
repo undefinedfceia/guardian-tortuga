@@ -1,4 +1,4 @@
-\begin{verbatim}
+\begin{lstlisting}[language=C++]
 struct STree { // [cerrado-abierto), defininir "oper" y "NEUT"
     vector<ll> st;int n;
     STree(int n): st(4*n+5,NEUT), n(n) {}
@@ -18,4 +18,4 @@ struct STree { // [cerrado-abierto), defininir "oper" y "NEUT"
     void upd(int p, ll v){upd(1,0,n,p,v);}
     ll query(int a, int b){return query(1,0,n,a,b);}
 }; // usage: STree st(n);st.upd(i,v);st.query(s,e);
-\end{verbatim}
+\end{lstlisting}

@@ -1,4 +1,4 @@
-\begin{verbatim}
+\begin{lstlisting}[language=C++]
 ll gcd(ll a, ll b){return a?gcd(b%a,a):b;}
 
 ull mulmod(ull a, ull b, ull m){ // 0 <= a, b < m
@@ -27,4 +27,4 @@ void fact(ll n, map<ll,int>& f){ //O (lg n)^3
 	if(rabin(n)){f[n]++;return;}
 	ll q=rho(n);fact(q,f);fact(n/q,f);
 }
-\end{verbatim}
+\end{lstlisting}
