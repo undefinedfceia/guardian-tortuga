@@ -75,7 +75,7 @@ int main(){
 				ll der = min((*opensA.begin())->R, v.R);
 				m = max(abs(der - iz), m);
 			}
-			opensA.erase(*opensB.find(&v));
+			opensB.erase(*opensB.find(&v));
 		}
 	}
 	cout << m << endl;
