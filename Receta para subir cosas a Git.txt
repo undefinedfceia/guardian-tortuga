@@ -7,17 +7,17 @@ Setear configuracion global del git (una sola vez)
 -abris la terminal en esa ubicacion
 -pones "git add ." (sin comillas)
 
-2- Hacer el commit (=envío de schrondiger - armado de paquete)
+2- Hacer el commit (armado de paquete)
 -git commit -m "Nombre_del_commit (envío)"
 
-3- hacer el push
+3- Hacer el push (enviar)
 - git push
 
 
 Para actualizar:
 -abris la terminal en tu repositorio
 -pones git pull
-- skerry
+-skerry
 
 /**************** eliminar archivos por extension: ********************/
 Windows: DEL /Q /S *.exe *.o
