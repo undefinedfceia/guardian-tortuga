@@ -19,7 +19,7 @@ const int MAXN=100100;
 
 int main() {
     ios::sync_with_stdio(0);
-    cin.tie(nullptr);
+    //cin.tie(nullptr);
     int n;
     string s;
     cin >> n >> s;

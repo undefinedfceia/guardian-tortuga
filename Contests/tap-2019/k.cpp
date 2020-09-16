@@ -52,30 +52,30 @@ int main(){
 			e.pb(event(closeB, l, r, r));
 		}
 	}
-	set<event*> opensA, opensB;
+	set<event> opensA, opensB;
 	sort(e.begin(), e.end(), comp);
 	ll m = 0;
 	for( it = e.begin(); it != e.end(); it++){
 		event v = *it;
 		if(v.s == openA)
-			opensA.insert(&v);
+			opensA.insert(v);
 		if(v.s == openB)
-			opensB.insert(&v);
+			opensB.insert(v);
 		if(v.s == closeA){
 			if(sz(opensB) > 0){			
-				ll iz = max((*opensB.begin())->L, v.L);
-				ll der = min((*opensB.begin())->R, v.R);
+				ll iz = max((*opensB.begin()).L, v.L);
+				ll der = min((*opensB.begin()).R, v.R);
 				m = max(abs(der - iz), m);
 			}
-			opensA.erase(*opensA.find(&v));
+			opensA.erase(*opensA.find(v));
 		}
 		if(v.s == closeB){
 			if(sz(opensA) > 0){
-				ll iz = max((*opensA.begin())->L, v.L);
-				ll der = min((*opensA.begin())->R, v.R);
+				ll iz = max((*opensA.begin()).L, v.L);
+				ll der = min((*opensA.begin()).R, v.R);
 				m = max(abs(der - iz), m);
 			}
-			opensB.erase(*opensB.find(&v));
+			opensB.erase(*opensB.find(v));
 		}
 	}
 	cout << m << endl;
