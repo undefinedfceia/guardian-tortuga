@@ -18,8 +18,35 @@ typedef pair<int,int> ii;
 
 const int MAXN=100100;
 
+int count_ones(int a, int b, int n, int k){
+    int delta_count = 0;
+    for(int j = 0; j < n && delta_count <= k; j++) {
+        delta_count +=  (a & 1) != (b & 1);
+        a = a >> 1;
+        b = b >> 1;
+    }
+    return delta_count;
+}
+
 int main() {
     ios::sync_with_stdio(0);
-    cin.tie(nullptr);
-	return 0;
+    int n, m, k, fedors_army, count = 0, delta;
+
+    cin >> n >> m >> k;
+ 
+    int army[m];
+
+    forn(i, m) {
+        cin >> army[i];
+    }
+
+    cin >> fedors_army;
+
+    forn(i, m) {
+        count += count_ones(fedors_army, army[i], n, k) <= k;
+    }
+
+    cout << count << endl;
+
+    return 0;
 }
