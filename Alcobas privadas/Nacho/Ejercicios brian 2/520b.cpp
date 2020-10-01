@@ -24,7 +24,7 @@ int bfs(int source, int search){
     ll dist[MAXN];
     bool visited[MAXN];
  
-    forn(i, MAXN){ 
+    forn(i, MAXN) { 
         dist[i] = MAXN;
         visited[i] = false;
     }
@@ -44,7 +44,7 @@ int bfs(int source, int search){
         q.pop();
         if(node == search)
             break;
-        if((node - 1) >= 0 ){
+        if((node - 1) >= 0 ) {
             if(!visited[node - 1]){
                 q.push(node - 1);
                 dist[node - 1] = dist[node] + 1;
@@ -52,7 +52,7 @@ int bfs(int source, int search){
         }
         if(node > search)
             continue;
-        if(!visited[node * 2]){
+        if(!visited[node * 2]) {
             q.push(node * 2);
             dist[node * 2] = dist[node] + 1;
         }
