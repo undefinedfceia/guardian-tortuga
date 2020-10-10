@@ -10,4 +10,3 @@ vector<ll> factorize(ll m){
   if(m!=1) fact.push_back(m);
   return fact;
 }
-
