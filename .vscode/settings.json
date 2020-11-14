@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "C:\\Users\\kasev\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
+    "python.pythonPath": "c:\\Users\\facun\\Desktop\\Repositories\\guardian-tortuga\\venv\\Scripts\\python.exe",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
