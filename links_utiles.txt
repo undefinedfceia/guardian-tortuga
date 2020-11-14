@@ -1,0 +1,6 @@
+https://cp-algorithms.com/
+https://en.cppreference.com/w/
+https://www.cplusplus.com/
+https://github.com/mredigonda/olaf
+https://gitlab.com/mredigonda/olaf
+https://github.com/vmartinv/eldiego
