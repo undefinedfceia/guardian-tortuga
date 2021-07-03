@@ -20,7 +20,7 @@ const int MAXN=10010;
 vector<ll> g[MAXN];
 vector<bool> visit;
 
-void DFS(int node){
+void DFS(int node) {
 	visit[node] = true;
 	for(unsigned int i=0; i < g[node].size();i ++){
 		int current = g[node][i];
